@@ -1,9 +1,9 @@
 export const ROLE_REDIRECTS: Record<string, string> = {
   HR: "/hr/employees",
-  EMPLOYEE: "/employee/attendence",
+  EMPLOYEE: "/employee/dashboard",
 };
 
-export const DEFAULT_LOGIN_REDIRECT = "/employee/attendence";
+export const DEFAULT_LOGIN_REDIRECT = "/employee/dashboard";
 
 export const publicRoutes = ["/", "/auth/new-verification"];
 
