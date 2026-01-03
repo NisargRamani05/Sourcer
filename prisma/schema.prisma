@@ -55,6 +55,29 @@ model User {
   languages            String?
   resumeFile           String?
 
+  // Salary fields
+  monthlyWage          Float?
+  yearlyWage           Float?
+  workingDaysPerWeek   Int?
+  breakTimeHours       Float?
+  basicSalary          Float?
+  basicSalaryPercent   Float?
+  hra                  Float?
+  hraPercent           Float?
+  standardAllowance    Float?
+  standardAllowancePercent Float?
+  performanceBonus     Float?
+  performanceBonusPercent Float?
+  lta                  Float?
+  ltaPercent           Float?
+  fixedAllowance       Float?
+  fixedAllowancePercent Float?
+  employeePF           Float?
+  employeePFPercent    Float?
+  employerPF           Float?
+  employerPFPercent    Float?
+  professionalTax      Float?
+
   accounts Account[]
   sessions Session[]
   employees User[] @relation("HREmployees")

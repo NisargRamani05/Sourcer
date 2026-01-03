@@ -30,6 +30,28 @@ export async function saveProfile(data: {
   education?: string;
   certifications?: string;
   languages?: string;
+  // Salary fields
+  monthlyWage?: string;
+  yearlyWage?: string;
+  workingDaysPerWeek?: string;
+  breakTimeHours?: string;
+  basicSalary?: string;
+  basicSalaryPercent?: string;
+  hra?: string;
+  hraPercent?: string;
+  standardAllowance?: string;
+  standardAllowancePercent?: string;
+  performanceBonus?: string;
+  performanceBonusPercent?: string;
+  lta?: string;
+  ltaPercent?: string;
+  fixedAllowance?: string;
+  fixedAllowancePercent?: string;
+  employeePF?: string;
+  employeePFPercent?: string;
+  employerPF?: string;
+  employerPFPercent?: string;
+  professionalTax?: string;
 }) {
   try {
     const session = await auth();
@@ -101,6 +123,28 @@ export async function saveProfile(data: {
         ...(data.education !== undefined && { education: data.education || null }),
         ...(data.certifications !== undefined && { certifications: data.certifications || null }),
         ...(data.languages !== undefined && { languages: data.languages || null }),
+        // Salary fields
+        ...(data.monthlyWage !== undefined && { monthlyWage: data.monthlyWage ? parseFloat(data.monthlyWage) : null }),
+        ...(data.yearlyWage !== undefined && { yearlyWage: data.yearlyWage ? parseFloat(data.yearlyWage) : null }),
+        ...(data.workingDaysPerWeek !== undefined && { workingDaysPerWeek: data.workingDaysPerWeek ? parseInt(data.workingDaysPerWeek) : null }),
+        ...(data.breakTimeHours !== undefined && { breakTimeHours: data.breakTimeHours ? parseFloat(data.breakTimeHours) : null }),
+        ...(data.basicSalary !== undefined && { basicSalary: data.basicSalary ? parseFloat(data.basicSalary) : null }),
+        ...(data.basicSalaryPercent !== undefined && { basicSalaryPercent: data.basicSalaryPercent ? parseFloat(data.basicSalaryPercent) : null }),
+        ...(data.hra !== undefined && { hra: data.hra ? parseFloat(data.hra) : null }),
+        ...(data.hraPercent !== undefined && { hraPercent: data.hraPercent ? parseFloat(data.hraPercent) : null }),
+        ...(data.standardAllowance !== undefined && { standardAllowance: data.standardAllowance ? parseFloat(data.standardAllowance) : null }),
+        ...(data.standardAllowancePercent !== undefined && { standardAllowancePercent: data.standardAllowancePercent ? parseFloat(data.standardAllowancePercent) : null }),
+        ...(data.performanceBonus !== undefined && { performanceBonus: data.performanceBonus ? parseFloat(data.performanceBonus) : null }),
+        ...(data.performanceBonusPercent !== undefined && { performanceBonusPercent: data.performanceBonusPercent ? parseFloat(data.performanceBonusPercent) : null }),
+        ...(data.lta !== undefined && { lta: data.lta ? parseFloat(data.lta) : null }),
+        ...(data.ltaPercent !== undefined && { ltaPercent: data.ltaPercent ? parseFloat(data.ltaPercent) : null }),
+        ...(data.fixedAllowance !== undefined && { fixedAllowance: data.fixedAllowance ? parseFloat(data.fixedAllowance) : null }),
+        ...(data.fixedAllowancePercent !== undefined && { fixedAllowancePercent: data.fixedAllowancePercent ? parseFloat(data.fixedAllowancePercent) : null }),
+        ...(data.employeePF !== undefined && { employeePF: data.employeePF ? parseFloat(data.employeePF) : null }),
+        ...(data.employeePFPercent !== undefined && { employeePFPercent: data.employeePFPercent ? parseFloat(data.employeePFPercent) : null }),
+        ...(data.employerPF !== undefined && { employerPF: data.employerPF ? parseFloat(data.employerPF) : null }),
+        ...(data.employerPFPercent !== undefined && { employerPFPercent: data.employerPFPercent ? parseFloat(data.employerPFPercent) : null }),
+        ...(data.professionalTax !== undefined && { professionalTax: data.professionalTax ? parseFloat(data.professionalTax) : null }),
       },
     });
 

@@ -129,6 +129,10 @@ export const {
           email: user.email,
           image: user.companyLogo ?? null,
           role: user.role,
+          companyName: user.companyName ?? undefined,
+          employeeId: user.employeeId ?? undefined,
+          phoneNumber: user.phoneNumber ?? undefined,
+          isPasswordChanged: user.isPasswordChanged,
         };
       },
     }),

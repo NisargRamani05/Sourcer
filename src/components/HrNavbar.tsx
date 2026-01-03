@@ -161,7 +161,7 @@ export function HrNavbar() {
               <DropdownMenuSeparator className="bg-[#CFCBC8]/10" />
 
               <DropdownMenuItem asChild className="focus:bg-[#CFCBC8]/10 focus:text-white cursor-pointer rounded-md my-1">
-                <Link href="/profile" className="flex items-center py-2.5">
+                <Link href="/hr/profile" className="flex items-center py-2.5">
                   <User className="mr-3 h-4 w-4 opacity-70" />
                   My Profile
                 </Link>
